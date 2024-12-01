@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym Training Tracker - Trainer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Gym Training Tracker - Trainer View</h1>
+  </header>
+  <main>
+    <div id="suggestion-form">
+      <h2>Suggest Future Changes</h2>
+      <form id="suggestionForm">
+        <label for="suggestedDate">Date:</label>
+        <input type="date" id="suggestedDate" required>
+
+        <label for="dietSuggestion">Diet Suggestion:</label>
+        <textarea id="dietSuggestion"></textarea>
+
+        <label for="exerciseSuggestion">Exercise Suggestion:</label>
+        <textarea id="exerciseSuggestion"></textarea>
+
+        <button type="button" onclick="submitSuggestion()">Submit Suggestion</button>
+      </form>
+    </div>
+  </main>
+  <script src="trainer.js"></script>
+</body>
+</html>

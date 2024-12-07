@@ -247,7 +247,35 @@
             backdrop-filter: blur(13px);
             border: 2px solid #ddd;
         }
+
+        /* ------------------------------------ */
+
+        #app-container {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        .controls {
+            margin: 20px;
+        }
+
+        label {
+            margin: 10px;
+        }
+
+        select,
+        input,
+        button {
+            margin: 10px;
+        }
+
+        #graph-container {
+            margin-top: 20px;
+        }
     </style>
+
+
 </head>
 
 <body>
@@ -290,6 +318,66 @@
             <!-- Table will be dynamically populated here -->
         </table>
     </div>
+
+    <!-- <div class="container">
+        <div class="controls">
+            <label for="columnDropdown">Select Column:</label>
+            <select id="columnDropdown"></select>
+
+            <label for="fromDate">From:</label>
+            <input type="date" id="fromDate">
+
+            <label for="toDate">To:</label>
+            <input type="date" id="toDate">
+
+            <button id="plotButton">Plot Graph</button>
+        </div>
+        <div id="chart-container">
+            <span id="y-label"></span>
+            <canvas id="chartCanvas"></canvas>
+        </div>
+    </div> -->
+
+    <div id="app-container">
+        <h1>Charts</h1>
+
+        <div class="controls">
+            <label for="column-select">Select parameter:</label>
+            <select id="column-select">
+                <!-- Options will be populated dynamically -->
+            </select>
+
+            <label for="from-date">From:</label>
+            <input type="date" id="from-date" />
+
+            <label for="to-date">To:</label>
+            <input type="date" id="to-date" />
+
+            <button id="plot-graph">Plot Graph</button>
+        </div>
+
+        <div id="graph-container">
+            <canvas id="graph"></canvas>
+            <h2 id="graph-title"></h2>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Add this in your <head> section to make sure Chart.js can handle time-based data -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@2.0.0"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+
+    <!-- Chart.js Date Adapter -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@2.0.0"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@2.0.0"></script>
+
+
+
+    <!-- --------------------------------------- -->
 
     <div class="grid-box" style="margin-top: 80px;">
 
@@ -381,7 +469,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/xlsx"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script>
-    <script src="script.js"></script>
+    <script src="chart.js"></script>
 
 
 
@@ -433,6 +521,16 @@
 
 
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@2.0.0"></script>
+
+    <!-- Chart.js 3 or later (with time plugin) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.0/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-time"></script>
+
+
 </body>
 
 </html>

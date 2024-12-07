@@ -1,0 +1,47 @@
+.side-menu {
+    position: fixed;
+    top: 0px;
+    left: -100vw;
+    width: calc(60vw);
+    height: 100vh;
+    background-color: brown;
+    z-index: 101;
+
+    display: block;
+    text-align: left;
+}
+
+.show-menu {
+    left: 50px;
+}
+
+.side-menu>h1,
+.side-menu>h2 {
+    text-align: left;
+    margin: 20px;
+}
+
+.side-menu>p {
+    text-align: left;
+    margin: 20px;
+    margin-left: 40px;
+}
+
+
+.menu-icon  { 
+    float: left;
+    margin: 5px;
+    margin-top: 15px;
+    margin-left: 13px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 750px) {
+
+    .side-menu {
+
+        width: 500px;
+        height: 500px
+    }
+
+}

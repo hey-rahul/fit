@@ -209,6 +209,15 @@ table {
     /* Dynamically adjust column widths */
 }
 
+table {
+    text-align: left; /* Aligns text in all cells to the left */
+  }
+  
+  table th,
+  table td {
+    text-align: left; /* Ensures text in both header and body cells aligns left */
+  }
+
 th,
 td {
     padding: 8px;

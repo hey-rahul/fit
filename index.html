@@ -93,17 +93,16 @@
         <p>Rotate your phone to view the table clearly</p>
     </div>
 
-    <!-- <div id="controls">
-        <input type="file" id="file-input" accept=".xlsx" />
-        <button id="reset-view">Zoom to Fit</button>
-    </div>
-    <div id="graph-container"></div> -->
-
-
-
+ 
 
     <div class="table-container" style="width: calc(100vw - 60px); overflow-x: scroll; margin: 20px;">
         <table id="csvTable">
+            <!-- Table will be dynamically populated here -->
+        </table>
+    </div>
+
+    <div class="table-container" style="width: calc(100vw - 60px); overflow-x: scroll; margin: 20px;">
+        <table id="csvTable2">
             <!-- Table will be dynamically populated here -->
         </table>
     </div>
@@ -266,57 +265,15 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/xlsx"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script>
-    <script src="chart.js"></script>
+    <script src="assets/js/chart.js"></script>
     <script src="menu.js"></script>
+    <script src="assets/js/bca-table.js"></script>
+    <script src="assets/js/workout-table.js"></script>
 
 
 
     <script>
-        // Read the CSV file and generate the table
-        async function generateTableFromCSV(file) {
-            try {
-                const response = await fetch(file);
-                const csvData = await response.text();
-
-                const rows = csvData.split("\n");
-                const table = document.getElementById("csvTable");
-
-                // Process rows
-                rows.forEach((row, rowIndex) => {
-                    const cells = row.split(",");
-                    const tr = document.createElement("tr");
-
-                    // Process each cell
-                    cells.forEach((cell, cellIndex) => {
-                        const td = document.createElement(rowIndex === 0 ? "th" : "td");
-                        td.textContent = cell.trim();
-
-                        // Add the fixed-corner class to the top-left cell
-                        if (rowIndex === 0 && cellIndex === 0) {
-                            td.classList.add("fixed-corner");
-                        }
-                        // Add the fixed-column class to the first column (except top-left)
-                        else if (cellIndex === 0) {
-                            td.classList.add("fixed-column");
-                        }
-                        // Add the fixed-row class to the first row (except top-left)
-                        else if (rowIndex === 0) {
-                            td.classList.add("fixed-row");
-                        }
-
-                        tr.appendChild(td);
-                    });
-
-                    table.appendChild(tr);
-                });
-            } catch (error) {
-                console.error("Error loading CSV file:", error);
-            }
-        }
-
-        // Call the function with the path to your CSV file
-        generateTableFromCSV("data.csv");
-
+       
 
     </script>
 

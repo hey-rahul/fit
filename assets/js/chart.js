@@ -12,7 +12,7 @@ let chartInstance = null;  // Keep track of the current chart instance
 // Load the CSV file and process it
 function loadCSV() {
     // Replace with your actual CSV URL or local path
-    fetch('data.csv')
+    fetch('assets/data/bca.csv')
         .then(response => response.text())
         .then(csvText => {
             const rows = csvText.split("\n").map(row => row.split(","));

@@ -7,12 +7,16 @@
     background-color: brown;
     z-index: 101;
 
+    overflow-y: auto;
     display: block;
     text-align: left;
+    transition: left 0.5s ease-in-out;
 }
 
 .show-menu {
     left: 50px;
+    transition: left 0.5s ease-in-out;
+
 }
 
 .side-menu>h1,
@@ -41,7 +45,7 @@
     .side-menu {
 
         width: 500px;
-        height: 500px
+        height: 550px
     }
 
 }

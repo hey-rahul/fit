@@ -1,26 +1,26 @@
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
-  z-index: 1;
-  /* font-family: 'Work Sans', sans-serif; */
-  /* font-family:'Trebuchet MS', sans-serif; */
-  font-family:'Roboto Condensed', sans-serif;
-  
-  -webkit-touch-callout: none;
-  /* iOS Safari */
-  -webkit-user-select: none;
-  /* Safari */
-  -khtml-user-select: none;
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Old versions of Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
-  user-select: none;
-  /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+    box-sizing: border-box;
+    z-index: 1;
+    /* font-family: 'Work Sans', sans-serif; */
+    /* font-family:'Trebuchet MS', sans-serif; */
+    font-family: 'Roboto Condensed', sans-serif;
 
-  
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+
+
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Work+Sans:wght@300&display=swap');
@@ -237,13 +237,15 @@ table {
 }
 
 table {
-    text-align: left; /* Aligns text in all cells to the left */
-  }
-  
-  table th,
-  table td {
-    text-align: left; /* Ensures text in both header and body cells aligns left */
-  }
+    text-align: left;
+    /* Aligns text in all cells to the left */
+}
+
+table th,
+table td {
+    text-align: left;
+    /* Ensures text in both header and body cells aligns left */
+}
 
 th,
 td {
@@ -254,6 +256,8 @@ td {
     /* Prevent text wrapping */
 
 }
+
+
 
 /* th {
 background-color: #f2f2f2;
@@ -295,6 +299,72 @@ background-color: #f2f2f2;
     backdrop-filter: blur(13px);
     border: 2px solid #ddd;
 }
+
+
+
+.table-container {
+    width: calc(100vw - 60px - 100px);
+    overflow-x: scroll;
+    margin: calc(20px + 50px);
+}
+
+@media (max-width: 768px) {
+    .table-container {
+        width: calc(100vw - 60px);
+        overflow-x: scroll;
+        margin: calc(20px);
+    }
+}
+
+
+
+
+
+
+
+
+
+/* General table styling */
+table {
+    width: 100%;
+    /* Make table fit the available width */
+    border-collapse: collapse;
+    /* Ensure clean borders */
+    table-layout: auto; 
+    /* Allow column widths to adjust based on content */
+    word-wrap: break-word;
+    /* Allow text wrapping */
+    overflow-wrap: break-word;
+    /* Prevent text overflow */
+}
+
+/* Style for table headers and cells */
+table#csvTable2 th:nth-child(3),
+table#csvTable2 td:nth-child(3) {
+
+    text-align: left;
+    /* Align text to the left */
+    /* padding: 8px; */
+    /* Add padding for readability */
+    /* border: 1px solid #ddd; */
+    /* Add a light border */
+    /* vertical-align: top; */
+    /* Align cell content to the top for better readability */
+    white-space: normal;
+    /* Allow text to wrap inside cells */
+    word-break: break-word;
+    /* Wrap long words inside cells */
+}
+
+/* Add some responsiveness for smaller screens */
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+        /* Reduce font size slightly for smaller screens */
+    }
+}
+
+
 
 /* ------------------------------------ */
 
@@ -377,5 +447,3 @@ input {
 
 
 /* ------------------------------------ */
-
-

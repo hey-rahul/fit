@@ -20,8 +20,9 @@
 
 @media (max-width: 768px) {
     .table-container {
-        width: calc(100vw - 40px);
+        width: calc(100vw - 0px);
         overflow-x: scroll;
-        margin: calc(10px);
+        margin: 0;
+        margin-top: calc(50px);
     }
 }

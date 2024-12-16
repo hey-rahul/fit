@@ -20,6 +20,8 @@
     user-select: none;
     /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 
+    transition:  1s ease-in-out;
+
 
 }
 
@@ -398,6 +400,8 @@ table#csvTable2 td:nth-child(3) {
         font-size: 14px;
         /* Reduce font size slightly for smaller screens */
     }
+
+    
 }
 
 

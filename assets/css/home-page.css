@@ -1,0 +1,27 @@
+.home-page {
+    margin: 50px;
+    background-color: var(--base);
+    border-radius: 13px;
+    padding: 20px;
+}
+
+
+
+.table-container {
+    /* width: calc(100vw - 60px - 100px); */
+    overflow-x: scroll;
+    margin: calc(20px + 50px);
+
+    margin: 50px;
+    background-color: var(--base);
+    border-radius: 13px;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .table-container {
+        width: calc(100vw - 40px);
+        overflow-x: scroll;
+        margin: calc(10px);
+    }
+}

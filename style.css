@@ -90,6 +90,8 @@ header {
 
 @media (prefers-color-scheme: light) {
     * {
+
+        --base: #fff;
         color-scheme: light;
         --bg: #ffffff50;
     }
@@ -108,6 +110,7 @@ header {
 
 @media (prefers-color-scheme: dark) {
     * {
+        --base: #000;
         color-scheme: dark;
         --bg: #00000050;
         --bs: 0 4px 8px rgb(0 0 0 / 14%);
@@ -230,7 +233,7 @@ max-width: 100%; */
 }
 
 table {
-    width: 100%;
+    /* width: 100%; */
     border-collapse: collapse;
     table-layout: auto;
     /* Dynamically adjust column widths */
@@ -239,6 +242,9 @@ table {
 table {
     text-align: left;
     /* Aligns text in all cells to the left */
+
+    border-collapse: separate; /* Essential for border-spacing to work */
+  border-spacing: 10px;
 }
 
 table th,
@@ -251,9 +257,10 @@ th,
 td {
     padding: 8px;
     text-align: center;
-    border: 1px solid #ddd;
+    border: 0.1px solid #ddd;
     white-space: nowrap;
     /* Prevent text wrapping */
+    border-radius: 5px; 
 
 }
 
@@ -272,7 +279,9 @@ background-color: #f2f2f2;
     z-index: 2;
     /* Ensure it stays above other cells */
     backdrop-filter: blur(13px);
-    border: 2px solid #ddd;
+    border: 3px solid #ddd;
+    border-spacing: 10px;
+    
 }
 
 /* Fix the first row */
@@ -284,7 +293,11 @@ background-color: #f2f2f2;
     z-index: 3;
     /* Ensure it stays above other cells, even above the first column */
     backdrop-filter: blur(13px);
-    border: 2px solid #ddd;
+    border: 3px solid #ddd;
+
+    border-spacing: 10px;
+    border-collapse: separate; /* Essential for border-spacing to work */
+  border-spacing: 10px;
 }
 
 /* Fix the top-left cell */
@@ -297,24 +310,14 @@ background-color: #f2f2f2;
     z-index: 4;
     /* Highest z-index to keep it above other elements */
     backdrop-filter: blur(13px);
-    border: 2px solid #ddd;
+    border: 3px solid #ddd;
+    border-spacing: 10px;
+    border-collapse: separate; /* Essential for border-spacing to work */
+  border-spacing: 10px;
 }
 
 
 
-.table-container {
-    width: calc(100vw - 60px - 100px);
-    overflow-x: scroll;
-    margin: calc(20px + 50px);
-}
-
-@media (max-width: 768px) {
-    .table-container {
-        width: calc(100vw - 60px);
-        overflow-x: scroll;
-        margin: calc(20px);
-    }
-}
 
 
 
@@ -336,6 +339,10 @@ table {
     /* Allow text wrapping */
     overflow-wrap: break-word;
     /* Prevent text overflow */
+
+    border-collapse: separate; /* Essential for border-spacing to work */
+  border-spacing: 20px;
+  border-radius: 13px;
 }
 
 /* Style for table headers and cells */

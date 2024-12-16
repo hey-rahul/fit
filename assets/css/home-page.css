@@ -29,27 +29,24 @@
         /* overflow: hidden; */
     }
 
-    .table-header {
+    /* .table-header {
         position: absolute;
-    /* width: calc(100% -60px); */
-    /* width: calc(100% - 100px); */
-    width: calc(100% - 000px);
-    height: 100px;
-    background-color: grey;
-    z-index: 3;
-    margin: -20px;
-
-    }
+        width: calc(100% - 000px);
+        height: 100px;
+        background-color: grey;
+        z-index: 3;
+        margin: -20px;
+    } */
 }
 
-.table-header {
+/* .table-header {
     position: absolute;
-    /* width: calc(100% -60px); */
+    
     width: calc(100% - 100px);
-    /* width: calc(100% - 000px); */
+   
     height: 100px;
     background-color: grey;
     z-index: 3;
     margin: -20px;
 
-}
+} */

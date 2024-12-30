@@ -26,6 +26,7 @@
 
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="menu.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/menu.css">
     <link rel="stylesheet" type="text/css" href="assets/css/home-page.css">
 
     <link rel="stylesheet"
@@ -68,34 +69,60 @@
         <!-- <h1>Menu</h1> -->
         <p>[Note: Under development. This menu is not yet functional!]</p>
 
-        <h2>Personal records</h2>
+        <div id="breadcrumb-container">
+            <div>You are at</div>
+            <div id="breadcrumb">Workout > Log > Today > Enter data</div>
+        </div>
 
-        <p>Workout log</p>
 
-        <p>Diet log</p>
+        <div class="filter-row" id="row1">
+            <div class="filter-tab">Body composition</div>
+            <div class="filter-tab selected">Workout</div>
+            <div class="filter-tab">Diet</div>
+        </div>
+        <div class="filter-row" id="row2">
+            <div class="filter-tab">Records</div>
+            <div class="filter-tab selected">Logs</div>
+            <div class="filter-tab">Targets</div>
+        </div>
+        <div class="filter-row" id="row3">
+            <div class="filter-tab">Recent past (last 2 weeks)</div>
+            <div class="filter-tab">Yesterday</div>
+            <div class="filter-tab selected">Today</div>
+            <div class="filter-tab">Tomorrow</div>
+            <div class="filter-tab">Custom Range</div>
+        </div>
+        <div class="filter-row" id="row4">
+            <div class="filter-tab selected">Enter data</div>
+            <div class="filter-tab">View data</div>
+            <div class="filter-tab">Modify data</div>
+            <div class="filter-tab">Remove data</div>
+        </div>
 
-        <p>Targets</p>
+        <button>Take me there</button>
 
-        <p>Records</p>
+        <!-- <div class="output" id="output">Filters applied! Displaying output.</div> -->
 
-        <h2>BCA History</h2>
 
-        <p>Tabular view</p>
-
-        <p>Graphical view</p>
-
-        <p>Report view</p>
     </div>
 
     <div class="home-page">
 
-        <h1 >New launch!</h1>
+        <h1>New launch!</h1>
 
         <p>This website shows the BCA, PR, and other fitness related data belonging to Rahul.</p>
 
         <p>Updated every Sunday!</p>
 
         <p>Rotate your phone to view the table clearly</p>
+
+
+
+        <div id="dashboard">
+            <h1 id="month-header">Month Name</h1>
+            <div id="schedule"></div>
+            <input type="file" id="fileInput" accept=".xlsx">
+        </div>
     </div>
 
 
@@ -118,6 +145,13 @@
         <table id="csvTable2">
             <!-- Table will be dynamically populated here -->
         </table>
+    </div>
+
+
+    <div class="table-container" id="exercise-code">
+
+
+
     </div>
 
     <!-- <div class="container">
@@ -228,11 +262,19 @@
         </div>
 
 
+        <script>
 
+
+
+
+
+        </script>
 
 
 
     </div>
+
+
 
     <!-- <script>
         var m = document.getElementsByClassName("grid-item");
@@ -282,6 +324,7 @@
     <script src="menu.js"></script>
     <script src="assets/js/bca-table.js"></script>
     <script src="assets/js/workout-table.js"></script>
+    <script src="assets/js/log.js"></script>
 
 
 
@@ -297,6 +340,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.0/dist/chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-time"></script>
+    <script src="assets/js/menu.js"></script>
 
 
 </body>

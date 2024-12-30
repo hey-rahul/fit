@@ -1,0 +1,87 @@
+/* Breadcrumb Style */
+#breadcrumb {
+    /* font-family: Arial, sans-serif; */
+    font-size: 16px;
+    /* color: #555; */
+    /* margin-bottom: 10px; */
+    padding: 8px;
+    /* background-color: #f5f5f5; */
+    /* border: 1px solid #ddd; */
+    border-radius: 4px;
+    /* font-weight: bold; */
+  }
+
+  #breadcrumb-container {
+    /* font-family: Arial, sans-serif; */
+    /* font-size: 16px; */
+    /* color: #555; */
+    margin: 10px 20px;
+    padding: 8px;
+    /* background-color: #f5f5f5; */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    /* font-weight: bold; */
+  }
+  
+  /* Filter Row */
+  .filter-row {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 8px;
+    /* background-color: #f5f5f5; */
+    margin: 8px 0;
+    border-bottom: 1px solid #ddd;
+    /* border-radius: 4px; */
+  }
+  
+  /* Tab Style */
+  .filter-tab {
+    flex: 0 0 auto;
+    padding: 2px 15px;
+    margin: 0 5px;
+    /* border: 1px solid #ddd; */
+    border-radius: 4px 4px 0 0;
+    /* background-color: #e0e0e0; */
+    cursor: pointer;
+    text-align: center;
+    /* font-family: Arial, sans-serif; */
+    font-size: 14px;
+    user-select: none;
+    transition: background-color 0.3s ease, border-bottom 0.3s ease;
+  }
+  
+  /* Hover Effect */
+  .filter-tab:hover {
+    background-color: #d4d4d4;
+  }
+  
+  /* Selected Tab Style (like browser tabs) */
+  .filter-tab.selected {
+    /* background-color: #007BFF; */
+    /* color: #fff; */
+    border-bottom: 4px solid #fff; /* To give the "tab selected" effect */
+    font-weight: bold;
+    z-index: 1;
+  }
+  
+  /* Output Box */
+  .output {
+    padding: 15px;
+    /* background-color: #fff; */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    /* font-family: Arial, sans-serif; */
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  /* Optional: Hide Horizontal Scrollbar */
+  .filter-row::-webkit-scrollbar {
+    display: none;
+  }
+  .filter-row {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  

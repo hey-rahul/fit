@@ -50,3 +50,61 @@
     margin: -20px;
 
 } */
+
+
+
+
+#dashboard {
+    width: 90%;
+    margin: auto;
+}
+
+#month-header {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 24px;
+    color: #333;
+}
+
+#schedule {
+    /* background: white; */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.date-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.date {
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+    width: 50px;
+}
+
+.event {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.event-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.event-description {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #666;
+    display: none;
+}
+
+.event-title:hover {
+    color: #007BFF;
+}

@@ -4,9 +4,12 @@
     left: -100vw;
     width: calc(60vw);
     height: 100vh;
-    background-color: brown;
+    background-color: var(--bg);
+    backdrop-filter: blur(13px);
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
     z-index: 101;
 
+    border-left: 2px solid #fff;
     overflow-y: auto;
     display: block;
     text-align: left;

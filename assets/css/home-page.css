@@ -1,10 +1,14 @@
 .home-page {
-    margin: 50px;
+    margin: 30px;
     background-color: var(--base);
     border-radius: 13px;
-    padding: 20px;
+    padding: 10px;
 }
 
+
+.home-page h1, .home-page p {
+    margin-left: 10px;
+}
 
 
 .table-container {

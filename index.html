@@ -39,8 +39,8 @@
 </head>
 
 <body>
-
-    <i>Fitness records of</i>
+<div style="text-align: center;"><i style="text-align: center;">Fitness records of</i></div>
+    
 
     <header style="user-select: none; /* Standard for most modern browsers */
     -webkit-user-select: none; /* Safari */
@@ -50,7 +50,7 @@
         <span class="material-symbols-outlined menu-icon" onclick="toggleMenu()">
             menu
         </span>
-       
+
         <div>
             <h1 style="font-family: 'Times New Roman', Times, serif; vertical-align: middle; height: 25px;">RAHUL NATHA
             </h1>
@@ -59,12 +59,12 @@
 
     <div class="side-menu" id="menu">
         <p>[Note: Under development. This menu is not yet functional!]</p>
-    
+
         <div id="breadcrumb-container">
             <div>You are at</div>
             <div id="breadcrumb">Workout > Log > Today > Enter data</div>
         </div>
-    
+
         <div class="filter-row" id="row1" data-original="Body composition,Workout,Diet">
             <div class="filter-tab">Body composition</div>
             <div class="filter-tab selected">Workout</div>
@@ -75,7 +75,8 @@
             <div class="filter-tab selected">Logs</div>
             <div class="filter-tab">Targets</div>
         </div>
-        <div class="filter-row" id="row3" data-original="Recent past (last 2 weeks),Yesterday,Today,Tomorrow,Custom Range">
+        <div class="filter-row" id="row3"
+            data-original="Recent past (last 2 weeks),Yesterday,Today,Tomorrow,Custom Range">
             <div class="filter-tab">Recent past (last 2 weeks)</div>
             <div class="filter-tab">Yesterday</div>
             <div class="filter-tab selected">Today</div>
@@ -88,9 +89,9 @@
             <div class="filter-tab">Modify data</div>
             <div class="filter-tab">Remove data</div>
         </div>
-    
+
         <button>Take me there</button>
-    
+
         <!-- Edit Toggle -->
         <div class="edit-toggle">
             <label class="toggle-label">
@@ -99,9 +100,9 @@
             </label>
         </div>
     </div>
-    
-    
-    
+
+
+
 
     <!-- <div class="side-menu" id="menu">
 
@@ -173,7 +174,7 @@
     </div>
 
     <div class="table-container" style="display: none;">
-       <table id="csvTable2">
+        <table id="csvTable2">
             <!-- Table will be dynamically populated here -->
         </table>
     </div>
@@ -182,7 +183,7 @@
     <!-- <div class="table-container" id="exercise-code">
     </div> -->
 
-    
+
     <div class="container" id="workoutLog" style="display: none;"></div>
     <!-- <div class="container">
         <div class="controls">
@@ -251,59 +252,55 @@
 
 
     <!-- --------------------------------------- -->
+    <div id="bca_reports">
+        <h1>Body Composition Analysis (BCA)</h1>
+        <div class="grid-box">
 
-    <div class="grid-box" style="margin-top: 80px;">
+            <div class="grid-item"
+                onclick="window.open('https://drive.google.com/file/d/1JZROswjiuInYs4vVeXRtD1a092qJsgSu/view?usp=sharing', '_blank')">
+                <p>BCA
+                    <br> 2025-01-11
 
+                </p>
+            </div>
+            <div class="grid-item"
+                onclick="window.open('https://drive.google.com/file/d/1bnMArydw1Ag1k-KkZBrgJNAJmGLZdbvw/view?usp=sharing', '_blank')">
+                <p>BCA
+                    <br> 2024-12-01
 
-        <div class="grid-item"
-            onclick="window.open('https://drive.google.com/file/d/1JZROswjiuInYs4vVeXRtD1a092qJsgSu/view?usp=sharing', '_blank')">
-            <p>BCA
-                <br> 11 JAN 2025
+                </p>
+            </div>
+            <div class="grid-item"
+                onclick="window.open('https://drive.google.com/file/d/14p24a8WcabuiuUqMqYWYT0mT6Bqiix8L/view?usp=sharing', '_blank')">
+                <p>BCA
+                    <br> 2024-10-26
 
-            </p>
+                </p>
+            </div>
+            <div class="grid-item"
+                onclick="window.open('https://drive.google.com/file/d/1mxgPdmPMj_7OSTtEUUQ9GntEQmCtygK7/view?usp=sharing', '_blank')">
+                <p>BCA
+                    <br> 2024-09-21
+
+                </p>
+            </div>
+            <div class="grid-item"
+                onclick="window.open('https://drive.google.com/file/d/1hd38o2tqANA4SKbA29XABcMFU_ucsuL7/view?usp=sharing', '_blank')">
+                <p>BCA
+                    <br> 2024-07-15
+
+                </p>
+            </div>
+            <div class="grid-item"
+                onclick="window.open('https://drive.google.com/file/d/1SwyCUFFQiU7oiHJzKYZadvE84pCpdP78/view?usp=sharing', '_blank')">
+                <p>BCA
+                    <br> 2024-03-22
+
+                </p>
+            </div>
+
         </div>
-        <div class="grid-item"
-            onclick="window.open('https://drive.google.com/file/d/1bnMArydw1Ag1k-KkZBrgJNAJmGLZdbvw/view?usp=sharing', '_blank')">
-            <p>BCA
-                <br> 01 DEC 2024
-
-            </p>
-        </div>
-        <div class="grid-item"
-            onclick="window.open('https://drive.google.com/file/d/14p24a8WcabuiuUqMqYWYT0mT6Bqiix8L/view?usp=sharing', '_blank')">
-            <p>BCA
-                <br> 26 OCT 2024
-
-            </p>
-        </div>
-        <div class="grid-item"
-            onclick="window.open('https://drive.google.com/file/d/1mxgPdmPMj_7OSTtEUUQ9GntEQmCtygK7/view?usp=sharing', '_blank')">
-            <p>BCA
-                <br> 21 SEP 2024
-
-            </p>
-        </div>
-        <div class="grid-item"
-            onclick="window.open('https://drive.google.com/file/d/1hd38o2tqANA4SKbA29XABcMFU_ucsuL7/view?usp=sharing', '_blank')">
-            <p>BCA
-                <br> 15 JUL 2024
-
-            </p>
-        </div>
-        <div class="grid-item"
-            onclick="window.open('https://drive.google.com/file/d/1SwyCUFFQiU7oiHJzKYZadvE84pCpdP78/view?usp=sharing', '_blank')">
-            <p>BCA
-                <br> 22 MAR 2024
-
-            </p>
-        </div>
-
-
-
-
-
     </div>
-
 
 
     <!-- <script>

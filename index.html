@@ -22,12 +22,12 @@
 
     <meta property="og:url" content="https://fit.rahulnatha.com" />
 
-
-
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="menu.css">
     <link rel="stylesheet" type="text/css" href="assets/css/menu.css">
     <link rel="stylesheet" type="text/css" href="assets/css/home-page.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/table.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/exercise-code.css">
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
@@ -47,26 +47,65 @@
     -ms-user-select: none; /* IE 10+ */
     -moz-user-select: none; /* Older Firefox */">
 
-
-
-
         <span class="material-symbols-outlined menu-icon" onclick="toggleMenu()">
             menu
         </span>
-        <!-- <img height="25px"
-            src="https://docs.google.com/drawings/d/e/2PACX-1vQ2GC0Sj-BkLd8LVZlOOzCKecLBOb2ZSlma0myPWwZEOqu2sDX6Wv3sFz8MvBzAUaAL0Gn4kOWiusgS/pub?w=520&amp;h=112" /> -->
+       
         <div>
             <h1 style="font-family: 'Times New Roman', Times, serif; vertical-align: middle; height: 25px;">RAHUL NATHA
             </h1>
-
         </div>
-
-
     </header>
 
     <div class="side-menu" id="menu">
+        <p>[Note: Under development. This menu is not yet functional!]</p>
+    
+        <div id="breadcrumb-container">
+            <div>You are at</div>
+            <div id="breadcrumb">Workout > Log > Today > Enter data</div>
+        </div>
+    
+        <div class="filter-row" id="row1" data-original="Body composition,Workout,Diet">
+            <div class="filter-tab">Body composition</div>
+            <div class="filter-tab selected">Workout</div>
+            <div class="filter-tab">Diet</div>
+        </div>
+        <div class="filter-row" id="row2" data-original="Records,Logs,Targets">
+            <div class="filter-tab">Records</div>
+            <div class="filter-tab selected">Logs</div>
+            <div class="filter-tab">Targets</div>
+        </div>
+        <div class="filter-row" id="row3" data-original="Recent past (last 2 weeks),Yesterday,Today,Tomorrow,Custom Range">
+            <div class="filter-tab">Recent past (last 2 weeks)</div>
+            <div class="filter-tab">Yesterday</div>
+            <div class="filter-tab selected">Today</div>
+            <div class="filter-tab">Tomorrow</div>
+            <div class="filter-tab">Custom Range</div>
+        </div>
+        <div class="filter-row" id="row4" data-original="Enter data,View data,Modify data,Remove data">
+            <div class="filter-tab selected">Enter data</div>
+            <div class="filter-tab">View data</div>
+            <div class="filter-tab">Modify data</div>
+            <div class="filter-tab">Remove data</div>
+        </div>
+    
+        <button>Take me there</button>
+    
+        <!-- Edit Toggle -->
+        <div class="edit-toggle">
+            <label class="toggle-label">
+                <input type="checkbox" id="edit-mode-toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+    
+    
+    
 
-        <!-- <h1>Menu</h1> -->
+    <!-- <div class="side-menu" id="menu">
+
+        
         <p>[Note: Under development. This menu is not yet functional!]</p>
 
         <div id="breadcrumb-container">
@@ -101,10 +140,10 @@
 
         <button>Take me there</button>
 
-        <!-- <div class="output" id="output">Filters applied! Displaying output.</div> -->
+       
 
 
-    </div>
+    </div> -->
 
     <div class="home-page">
 
@@ -154,6 +193,8 @@
 
     </div>
 
+    
+    <div class="container" id="workoutLog"></div>
     <!-- <div class="container">
         <div class="controls">
             <label for="columnDropdown">Select Column:</label>
@@ -226,6 +267,13 @@
 
 
         <div class="grid-item"
+            onclick="window.open('https://drive.google.com/file/d/1JZROswjiuInYs4vVeXRtD1a092qJsgSu/view?usp=sharing', '_blank')">
+            <p>BCA
+                <br> 11 JAN 2025
+
+            </p>
+        </div>
+        <div class="grid-item"
             onclick="window.open('https://drive.google.com/file/d/1bnMArydw1Ag1k-KkZBrgJNAJmGLZdbvw/view?usp=sharing', '_blank')">
             <p>BCA
                 <br> 01 DEC 2024
@@ -262,13 +310,6 @@
         </div>
 
 
-        <script>
-
-
-
-
-
-        </script>
 
 
 
@@ -341,6 +382,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-time"></script>
     <script src="assets/js/menu.js"></script>
+    <script src="assets/js/exercise-code.js"></script>
 
 
 </body>

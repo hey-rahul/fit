@@ -1,0 +1,97 @@
+.table-container {
+    overflow: auto;
+    max-height: calc(100vh - 100px);
+}
+
+table {
+    text-align: left;
+    border-collapse: separate;
+    transition: 1s ease-in-out;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    border-collapse: separate;
+    border-spacing: 0px;
+    /* border-radius: 13px; */
+}
+
+table th,
+table td {
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+    white-space: nowrap;
+    /* border-radius: 5px; */
+    transition: 1s ease-in-out;
+    border-spacing: 10px;
+}
+
+.fixed-column {
+    position: sticky;
+    left: 0;
+    background-color: var(--bg);
+    box-shadow: var(--bs);
+    z-index: 2;
+    backdrop-filter: blur(13px);
+    /* border: 3px solid #ddd; */
+}
+
+.fixed-row {
+    position: sticky;
+    top: 0;
+    background-color: var(--bg);
+    box-shadow: var(--bs);
+    z-index: 3;
+    backdrop-filter: blur(13px);
+    /* border: 3px solid #ddd; */
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.fixed-corner {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: var(--bg);
+    box-shadow: var(--bs);
+    z-index: 4;
+    backdrop-filter: blur(13px);
+    /* border: 3px solid #ddd; */
+    border-spacing: 10px;
+    border-collapse: separate;
+}
+
+td:nth-child(1),
+td:nth-child(2) {
+    /* max-width: 90px; */
+    /* width: 90px; */
+    overflow: hidden;
+    transition: width 1s ease-in-out;
+}
+
+td:nth-child(1):hover,
+td:nth-child(2):hover {
+    max-width: max-content;
+    width: max-content;
+    overflow: hidden;
+    transition: width 1s ease-in-out;
+}
+
+
+/* Style for table headers and cells */
+table#csvTable2 th:nth-child(3),
+table#csvTable2 td:nth-child(3) {
+
+    text-align: left;
+    white-space: normal;
+    word-break: break-word;
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+}

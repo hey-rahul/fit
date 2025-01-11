@@ -1,24 +1,24 @@
 ﻿date,title,exercise_code,observations,action_score
 01-11-2024,Rest,-,,
 02-11-2024,Rest,-,,
-03-11-2024,Legs,"barbell back squat, 75 kg pr;",proper re-racking to be practiced,
-04-11-2024,Chest and shoulders,"bench press, 40 kg; 45 kg, fail;
+03-11-2024,Legs,barbell back squat_ 75 kg pr;,proper re-racking to be practiced,
+04-11-2024,Chest and shoulders,"bench press_ 40 kg; 45 kg_ fail;
 chest press; 
 dumble flies;
 shoulder press;",,
 05-11-2024,Rest,-,,
-06-11-2024,HIIT,"HIIT: warm-up | barbell row | barbell shoulder press | barbell back squat, 3 x;
-treadmill, 1.2 km, 12 min;",,
-07-11-2024,Back and core,"back: conventional dead lift, 77 kg pr; 
+06-11-2024,HIIT,"HIIT: warm-up | barbell row | barbell shoulder press | barbell back squat_ 3 x;
+treadmill_ 1.2 km_ 12 min;",,
+07-11-2024,Back and core,"back: conventional dead lift_ 77 kg pr; 
 cable row;
 v row;
-treadmill, 1 km, 12 min;
-core: plank; side plank; crunch; ball rise;","dead lift observation: chest almost at hip level, needed to be higher up",
+treadmill_ 1 km_ 12 min;
+core: plank; side plank; crunch; ball rise;",dead lift observation: chest almost at hip level_ needed to be higher up,
 08-11-2024,Rest,-,,4
 09-11-2024,Rest,-,,4
 10-11-2024,Arms,arms: bicep curls; skull crush; cable biceps; cable triceps; triceps push down with box; forearms with straight bar; cable forearms;,,4
-11-11-2024,Legs,"barbell back squat, 90 kg pr, 1 rep; 1 rep fail; 1 rep;",didn't go deep enough,4
-12-11-2024,HIIT,"HIIT: jumping jacks | box squats | jump squats | burpees | shoulder, knee and toe touch push-up | box pistol squats | plank | push-up, 3 x;",,4
+11-11-2024,Legs,barbell back squat_ 90 kg pr_ 1 rep; 1 rep fail; 1 rep;,didn't go deep enough,4
+12-11-2024,HIIT,HIIT: jumping jacks | box squats | jump squats | burpees | shoulder_ knee and toe touch push-up | box pistol squats | plank | push-up_ 3 x;,,4
 13-11-2024,Rest,-,,5
 14-11-2024,Rest,-,,4
 15-11-2024,Arms,arms: warm up; barbell curls; skull crush with kettle bell; diamond knee pushups; bicep curls with weight disc plate; prone back extension (superman); stretches;,,3
@@ -39,21 +39,21 @@ core: plank; side plank; crunch; ball rise;","dead lift observation: chest almos
 30-11-2024,Rest,-,,1
 01-12-2024,Yoga,-,,1
 02-12-2024,Upper body,-,,2
-03-12-2024,Arms,"cable bicep curl, 10 kg, 10 rep; 15 kg, 8 rep | 10 kg, 8 rep, 2x; 
-cable triceps pushdown, 11 kg, 10 rep; 15 kg, 8 rep | 10 kg, 8 rep, 2x; 
-cable triceps overhead extension, 12 kg, 10 rep, 3 x;",,3
+03-12-2024,Arms,"cable bicep curl_ 10 kg_ 10 rep; 15 kg_ 8 rep | 10 kg_ 8 rep_ 2x; 
+cable triceps pushdown_ 11 kg_ 10 rep; 15 kg_ 8 rep | 10 kg_ 8 rep_ 2x; 
+cable triceps overhead extension_ 12 kg_ 10 rep_ 3 x;",,3
 04-12-2024,Rest,-,,4
 05-12-2024,Upper body,barbell row; cardio;,,4
-06-12-2024,Legs,"conventional deadlift, 70 kg pr, 2-5 rep, 3 x; 
-goblet squat, 15 kg, 12 rep, 3 x; 
-incline leg press, 110 kg, 10 rep, 3 x; 
-lunge walk, 12.5 kg, 12.5 kg; 
-band squat, 52 rep;",,5
+06-12-2024,Legs,"conventional deadlift_ 70 kg pr_ 2-5 rep_ 3 x; 
+goblet squat_ 15 kg_ 12 rep_ 3 x; 
+incline leg press_ 110 kg_ 10 rep_ 3 x; 
+lunge walk_ 12.5 kg_ 12.5 kg; 
+band squat_ 52 rep;",,5
 07-12-2024,Rest,-,,5
 08-12-2024,Rest ,-,,5
 09-12-2024,Rest,-,,4
-10-12-2024,Compound exercise,"push-up, 50 rep;
-assisted pull-up, 20 rep;
+10-12-2024,Compound exercise,"push-up_ 50 rep;
+assisted pull-up_ 20 rep;
 barbell row;
 cable row;",,3
 11-12-2024,Legs,"back barbell squat;
@@ -61,17 +61,17 @@ front barbell squat;
 inclined leg press;
 leg extension;
 bulgarian squat;
-band squat, 50 rep;
-monster walk, 10 rep pair;",,3
+band squat_ 50 rep;
+monster walk_ 10 rep pair;",,3
 12-12-2024,Chest,"push-up;
-bench press, 50 kg pr;
+bench press_ 50 kg pr;
 inclined sholder press;
 skull crusher;
 triceps push down;
-treadmill, 12 min, 1.18 km, 2.5 inclinatioin;",,4
+treadmill_ 12 min_ 1.18 km_ 2.5 inclinatioin;",,4
 13-12-2024,Arms,"biceps curl;
 hammer curl;
-diamond push-ups, 10 rep;
+diamond push-ups_ 10 rep;
 skull crusher;
 triceps kicks;
 cable biceps curl;
@@ -79,7 +79,7 @@ cable biceps push-down;
 cable overhead triceps extension;
 forearms standing roll;
 forearms bench roll;
-treadmill, 12 min, 1.02 km, 2.5 inclinaton;",,4
+treadmill_ 12 min_ 1.02 km_ 2.5 inclinaton;",,4
 14-12-2024,Rest,-,,4
 15-12-2024,Rest ,-,,4
 16-12-2024,Rest,-,,4
@@ -90,21 +90,21 @@ treadmill, 12 min, 1.02 km, 2.5 inclinaton;",,4
 21-12-2024,Rest,-,,1
 22-12-2024,Rest,-,,1
 23-12-2024,Rest,-,,1
-24-12-2024,Compound exercise ,"Lat pulldown wide grip, 30 kg, 12 rep, 7 rpe; 35 kg, 8 rep, 9 rpe | 25 kg, 10 rep, 10 rpe, 2 x;
-Machine rowing, ;
-Barbell row, 35 kg, 12 rep, 3 x;
-Bicep hammer curls, 7.5 kg, 12 rep; 7.5 kg, 12 rep | 5 kg, 15 rep, 2 x;
-Bicep curls with EZ curl bar, ;
+24-12-2024,Compound exercise ,"Lat pulldown wide grip_ 30 kg_ 12 rep_ 7 rpe; 35 kg_ 8 rep_ 9 rpe | 25 kg_ 10 rep_ 10 rpe_ 2 x;
+Machine rowing_ ;
+Barbell row_ 35 kg_ 12 rep_ 3 x;
+Bicep hammer curls_ 7.5 kg_ 12 rep; 7.5 kg_ 12 rep | 5 kg_ 15 rep_ 2 x;
+Bicep curls with EZ curl bar_ ;
 Preacher curl with EZ curl bar;
-Running and walking, 18 min, 1.55 km;
-Dead hang, 40 s; 30 s;",Reracking of dumbells unsuccessful in an attempt and caused tiny cut on right index finger,1
+Running and walking_ 18 min_ 1.55 km;
+Dead hang_ 40 s; 30 s;",Reracking of dumbells unsuccessful in an attempt and caused tiny cut on right index finger,1
 25-12-2024,Rest,-,,2
-26-12-2024,Compound exercise,"push-up, 15 rep, 2x; 14 rep; 15 rep; 10 rep; 9 rep; 2 rep; 10 rep;",,1
-27-12-2024,Legs,"barbell back squat, 20 kg, 10 rep; 60 kg, 4 rep; 90 kg, 1 rep; 2 rep; 3 rep; 2 rep fail; 
-45 deg inclined leg press, 45 + 50 kg sin(45deg), 10 rep; 45 + 90 kg sin(45deg), 8 rep; 10 rep;
-lunge walk, 10 kg pair, 10 rep pair, 2 x; 12.5 kg pair, 8 rep pair;
-leg extension, 30 kg, 10 rep; 32 kg | 25 kg, 8 rep;
-treadmil, 8 min, 1 km;",,2
+26-12-2024,Compound exercise,push-up_ 15 rep_ 2x; 14 rep; 15 rep; 10 rep; 9 rep; 2 rep; 10 rep;,,1
+27-12-2024,Legs,"barbell back squat_ 20 kg_ 10 rep; 60 kg_ 4 rep; 90 kg_ 1 rep; 2 rep; 3 rep; 2 rep fail; 
+45 deg inclined leg press_ 45 + 50 kg sin(45deg)_ 10 rep; 45 + 90 kg sin(45deg)_ 8 rep; 10 rep;
+lunge walk_ 10 kg pair_ 10 rep pair_ 2 x; 12.5 kg pair_ 8 rep pair;
+leg extension_ 30 kg_ 10 rep; 32 kg | 25 kg_ 8 rep;
+treadmil_ 8 min_ 1 km;",,2
 28-12-2024,Rest,-,,3
 29-12-2024,Rest,-,,3
 30-12-2024,Rest,-,,3

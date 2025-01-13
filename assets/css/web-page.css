@@ -2,6 +2,7 @@
     height: calc(100vh - 128px);
     overflow: hidden;
     overflow: auto;
+    margin-bottom: 128px;
     /* display: none; */
 }
 

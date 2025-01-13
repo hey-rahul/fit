@@ -31,3 +31,15 @@ document.getElementById('content-2').style.display = "none";
 tab1.classList.add('active');
 
 document.getElementById('content-2').style.display = "block";
+
+
+
+
+
+const homePage = document.querySelector('.home-page');
+
+setTimeout(() => {
+  homePage.style.display = 'none'; 
+}, 5000); 
+
+// 3000 milliseconds = 3 seconds

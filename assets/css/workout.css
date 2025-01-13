@@ -97,7 +97,7 @@
     /* width: calc(100% - 500px); */
     /* height: 100px; */
     /* background-color: brown; */
-    display: inline-flex;
+    display: inline;
     float: left;
 }
 
@@ -106,10 +106,10 @@
     /* width: 100px; */
     /* height: 100px; */
     /* background-color: brown; */
-    display: inline-flex;
+    display: inline;
     float: right;
-    position:absolute;
-    right: 60px;
+    /* position:absolute; */
+    /* right: 60px; */
 }
 
 @media screen and (max-width: 750px) {

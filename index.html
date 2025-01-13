@@ -29,6 +29,8 @@
     <link rel="stylesheet" type="text/css" href="assets/css/table.css">
     <link rel="stylesheet" type="text/css" href="assets/css/exercise-code.css">
     <link rel="stylesheet" type="text/css" href="assets/css/workout.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/tab-bar.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/web-page.css">
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
@@ -40,7 +42,13 @@
 </head>
 
 <body>
-    <div style="text-align: center;"><i style="text-align: center;">Fitness records of</i></div>
+
+  
+
+
+
+
+    <div style="text-align: center;"><i style="text-align: center; line-height: 1.5em;">Fitness records of</i></div>
 
 
     <header style="user-select: none; /* Standard for most modern browsers */
@@ -48,9 +56,9 @@
     -ms-user-select: none; /* IE 10+ */
     -moz-user-select: none; /* Older Firefox */">
 
-        <span class="material-symbols-outlined menu-icon" onclick="toggleMenu()">
+        <!-- <span class="material-symbols-outlined menu-icon" onclick="toggleMenu()">
             menu
-        </span>
+        </span> -->
 
         <div>
             <h1 style="font-family: 'Times New Roman', Times, serif; vertical-align: middle; height: 25px;">RAHUL NATHA
@@ -104,89 +112,55 @@
 
 
 
-
-    <!-- <div class="side-menu" id="menu">
-
-        
-        <p>[Note: Under development. This menu is not yet functional!]</p>
-
-        <div id="breadcrumb-container">
-            <div>You are at</div>
-            <div id="breadcrumb">Workout > Log > Today > Enter data</div>
-        </div>
+    <div class="tab-bar">
+        <button class="tab active" id="tab1">Log</button>
+        <button class="tab" id="tab2">BCA</button>
+    </div>
+    
 
 
-        <div class="filter-row" id="row1">
-            <div class="filter-tab">Body composition</div>
-            <div class="filter-tab selected">Workout</div>
-            <div class="filter-tab">Diet</div>
-        </div>
-        <div class="filter-row" id="row2">
-            <div class="filter-tab">Records</div>
-            <div class="filter-tab selected">Logs</div>
-            <div class="filter-tab">Targets</div>
-        </div>
-        <div class="filter-row" id="row3">
-            <div class="filter-tab">Recent past (last 2 weeks)</div>
-            <div class="filter-tab">Yesterday</div>
-            <div class="filter-tab selected">Today</div>
-            <div class="filter-tab">Tomorrow</div>
-            <div class="filter-tab">Custom Range</div>
-        </div>
-        <div class="filter-row" id="row4">
-            <div class="filter-tab selected">Enter data</div>
-            <div class="filter-tab">View data</div>
-            <div class="filter-tab">Modify data</div>
-            <div class="filter-tab">Remove data</div>
-        </div>
+    <div class="web-page">
 
-        <button>Take me there</button>
+        <div class="home-page">
 
-       
+            <h1>New update!</h1>
 
+            <p>View Rahul's fitness data here, including BCA, PRs, and more</p>
 
-    </div> -->
+            <!-- <p>Updated every Sunday!</p> -->
 
-    <div class="home-page">
-
-        <h1>New update!</h1>
-
-        <p>View Rahul's fitness data here, including BCA, PRs, and more</p>
-
-        <!-- <p>Updated every Sunday!</p> -->
-
-        <!-- <p>Rotate your phone to view the table clearly</p> -->
+            <!-- <p>Rotate your phone to view the table clearly</p> -->
 
 
 
-        <!-- <div id="dashboard">
+            <!-- <div id="dashboard">
             <h1 id="month-header">Month Name</h1>
             <div id="schedule"></div>
             <input type="file" id="fileInput" accept=".xlsx">
         </div> -->
-    </div>
+        </div>
 
 
 
-    <div class="table-container" style="display: none;">
-        <table id="csvTable">
-            <!-- Table will be dynamically populated here -->
-        </table>
-    </div>
+        <div class="table-container" style="display: none;">
+            <table id="csvTable">
+                <!-- Table will be dynamically populated here -->
+            </table>
+        </div>
 
-    <div class="table-container" style="display: none;">
-        <table id="csvTable2">
-            <!-- Table will be dynamically populated here -->
-        </table>
-    </div>
-
-
-    <!-- <div class="table-container" id="exercise-code">
-    </div> -->
+        <div class="table-container" style="display: none;">
+            <table id="csvTable2">
+                <!-- Table will be dynamically populated here -->
+            </table>
+        </div>
 
 
-    <div class="container" id="workoutLog" style="display: none;"></div>
-    <!-- <div class="container">
+        <!-- <div class="table-container" id="exercise-code">
+     </div> -->
+
+
+        <div class="container" id="workoutLog" style="display: none;"></div>
+        <!-- <div class="container">
         <div class="controls">
             <label for="columnDropdown">Select Column:</label>
             <select id="columnDropdown"></select>
@@ -203,144 +177,146 @@
             <span id="y-label"></span>
             <canvas id="chartCanvas"></canvas>
         </div>
-    </div> -->
+     </div> -->
 
-    <div id="app-container" style="display: none;">
-        <h1>Charts</h1>
-
-
+        <div id="app-container" style="display: none;">
+            <h1>Charts</h1>
 
 
 
-        <div class="controls">
-            <label for="column-select">Select parameter:</label>
-            <select id="column-select">
-                <!-- Options will be populated dynamically -->
-            </select>
-
-            <label for="from-date">From:</label>
-            <input type="date" id="from-date" />
-
-            <label for="to-date">To:</label>
-            <input type="date" id="to-date" />
 
 
+            <div class="controls">
+                <label for="column-select">Select parameter:</label>
+                <select id="column-select">
+                    <!-- Options will be populated dynamically -->
+                </select>
 
-            <button id="plot-graph">Plot Graph</button>
-        </div>
+                <label for="from-date">From:</label>
+                <input type="date" id="from-date" />
 
-        <div class="graph">
-            <div id="graph-container">
-                <canvas id="graph"></canvas>
-                <!-- <h2 id="graph-title">Your graph appears here</h2> -->
+                <label for="to-date">To:</label>
+                <input type="date" id="to-date" />
+
+
+
+                <button id="plot-graph">Plot Graph</button>
+            </div>
+
+            <div class="graph">
+                <div id="graph-container">
+                    <canvas id="graph"></canvas>
+                    <!-- <h2 id="graph-title">Your graph appears here</h2> -->
+                </div>
             </div>
         </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- Add this in your <head> section to make sure Chart.js can handle time-based data -->
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@2.0.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <!-- Add this in your <head> section to make sure Chart.js can handle time-based data -->
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@2.0.0"></script>
 
-    <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+        <!-- Chart.js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
 
-    <!-- Chart.js Date Adapter -->
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@2.0.0"></script>
+        <!-- Chart.js Date Adapter -->
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@2.0.0"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@2.0.0"></script>
-
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@2.0.0"></script>
 
 
-    <!-- --------------------------------------- -->
-    <div id="bca_reports">
-        <h1>Body Composition Analysis (BCA)</h1>
-        <div class="grid-box">
 
-            <div class="grid-item"
-                onclick="window.open('https://drive.google.com/file/d/1JZROswjiuInYs4vVeXRtD1a092qJsgSu/view?usp=sharing', '_blank')">
-                <p>BCA
-                    <br> 2025-01-11
+        <!-- --------------------------------------- -->
+        <div id="content-1">
+            <h1>Body Composition Analysis (BCA)</h1>
+            <div class="grid-box">
 
-                </p>
+                <div class="grid-item"
+                    onclick="window.open('https://drive.google.com/file/d/1JZROswjiuInYs4vVeXRtD1a092qJsgSu/view?usp=sharing', '_blank')">
+                    <p>BCA
+                        <br> 2025-01-11
+
+                    </p>
+                </div>
+                <div class="grid-item"
+                    onclick="window.open('https://drive.google.com/file/d/1bnMArydw1Ag1k-KkZBrgJNAJmGLZdbvw/view?usp=sharing', '_blank')">
+                    <p>BCA
+                        <br> 2024-12-01
+
+                    </p>
+                </div>
+                <div class="grid-item"
+                    onclick="window.open('https://drive.google.com/file/d/14p24a8WcabuiuUqMqYWYT0mT6Bqiix8L/view?usp=sharing', '_blank')">
+                    <p>BCA
+                        <br> 2024-10-26
+
+                    </p>
+                </div>
+                <div class="grid-item"
+                    onclick="window.open('https://drive.google.com/file/d/1mxgPdmPMj_7OSTtEUUQ9GntEQmCtygK7/view?usp=sharing', '_blank')">
+                    <p>BCA
+                        <br> 2024-09-21
+
+                    </p>
+                </div>
+                <div class="grid-item"
+                    onclick="window.open('https://drive.google.com/file/d/1hd38o2tqANA4SKbA29XABcMFU_ucsuL7/view?usp=sharing', '_blank')">
+                    <p>BCA
+                        <br> 2024-07-15
+
+                    </p>
+                </div>
+                <div class="grid-item"
+                    onclick="window.open('https://drive.google.com/file/d/1SwyCUFFQiU7oiHJzKYZadvE84pCpdP78/view?usp=sharing', '_blank')">
+                    <p>BCA
+                        <br> 2024-03-22
+
+                    </p>
+                </div>
+
             </div>
-            <div class="grid-item"
-                onclick="window.open('https://drive.google.com/file/d/1bnMArydw1Ag1k-KkZBrgJNAJmGLZdbvw/view?usp=sharing', '_blank')">
-                <p>BCA
-                    <br> 2024-12-01
-
-                </p>
-            </div>
-            <div class="grid-item"
-                onclick="window.open('https://drive.google.com/file/d/14p24a8WcabuiuUqMqYWYT0mT6Bqiix8L/view?usp=sharing', '_blank')">
-                <p>BCA
-                    <br> 2024-10-26
-
-                </p>
-            </div>
-            <div class="grid-item"
-                onclick="window.open('https://drive.google.com/file/d/1mxgPdmPMj_7OSTtEUUQ9GntEQmCtygK7/view?usp=sharing', '_blank')">
-                <p>BCA
-                    <br> 2024-09-21
-
-                </p>
-            </div>
-            <div class="grid-item"
-                onclick="window.open('https://drive.google.com/file/d/1hd38o2tqANA4SKbA29XABcMFU_ucsuL7/view?usp=sharing', '_blank')">
-                <p>BCA
-                    <br> 2024-07-15
-
-                </p>
-            </div>
-            <div class="grid-item"
-                onclick="window.open('https://drive.google.com/file/d/1SwyCUFFQiU7oiHJzKYZadvE84pCpdP78/view?usp=sharing', '_blank')">
-                <p>BCA
-                    <br> 2024-03-22
-
-                </p>
-            </div>
-
-        </div>
-    </div>
-
-
-    <h1>Workout log</h1>
-    <div id="workout">
-
-
-        <div class="workout-row">
-            <div class="workout-date">11</div>
-            <!-- <div class="workout-action-score">AS <br> 5/7</div> -->
-            <div class="workout-title">BACK & CORE <div class="workout-expand">&#9660;</div></div>
-            
-            <div class="workout-view">
-                `
-                warm-up;
-                barbell row, 35 kg, 10 rep, 3 x;
-                inclined dumbbell row, 10 kg pair, 10 rep, 45 deg, 3 x;
-                machine row, 53 kg, 10 rep, 3 x;
-                lat pull, 53 kg, 10 rep, 3 x;
-                mountain climber, 20 rep pair;
-                plank, 90 s;
-                russian twist, 1 min;
-                leg raise and hold, 1 min;
-                tuck in, 25 rep, 2 x;
-                `
-            </div>
-
-            <!-- <div class="workout-table-container"></div> -->
         </div>
 
-        <div class="workout-row">
-            <div class="workout-date">12</div>
-            <!-- <div class="workout-action-score">AS <br> 6/7</div> -->
-            <div class="workout-title">REST<div class="workout-expand">&#9660;</div></div>
-             <!-- Down arrow -->
-            <div class="workout-view">No additional workout details</div>
+        <div id="content-2">
+            <h1>Workout log</h1>
+            <div id="workout">
+
+
+                <div class="workout-row">
+                    <div class="workout-date">11</div>
+                    <div class="workout-title">BACK & CORE
+                        <div class="workout-expand">&#9660;</div>
+                    </div>
+                    <div class="workout-view">
+                        `
+                        warm-up;
+                        barbell row, 35 kg, 10 rep, 3 x;
+                        inclined dumbbell row, 10 kg pair, 10 rep, 45 deg, 3 x;
+                        machine row, 53 kg, 10 rep, 3 x;
+                        lat pull, 53 kg, 10 rep, 3 x;
+                        mountain climber, 20 rep pair;
+                        plank, 90 s;
+                        russian twist, 1 min;
+                        leg raise and hold, 1 min;
+                        tuck in, 25 rep, 2 x;
+                        `
+                    </div>
+                </div>
+
+                <div class="workout-row">
+                    <div class="workout-date">12</div>
+
+                    <div class="workout-title">REST
+                        <div class="workout-expand">&#9660;</div>
+                    </div>
+
+                    <div class="workout-view">No additional workout details</div>
+                </div>
+            </div>
         </div>
 
-    </div>
-    <!-- <script>
+       
+        <!-- <script>
         var m = document.getElementsByClassName("grid-item");
 
         let hour = new Date().getHours();
@@ -378,37 +354,36 @@
         }
 
 
-    </script> -->
+     </script> -->
 
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/xlsx"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script>
-    <script src="assets/js/chart.js"></script>
-    <script src="menu.js"></script>
-    <script src="assets/js/bca-table.js"></script>
-    <!-- <script src="assets/js/workout-table.js"></script> -->
-    <script src="assets/js/log.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/xlsx"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script>
+        <script src="assets/js/chart.js"></script>
+        <script src="menu.js"></script>
+        <script src="assets/js/bca-table.js"></script>
+        <!-- <script src="assets/js/workout-table.js"></script> -->
+        <script src="assets/js/log.js"></script>
 
 
 
-    <script>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@2.0.0"></script>
+
+        <!-- Chart.js 3 or later (with time plugin) -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.0/dist/chart.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-time"></script>
+        <script src="assets/js/menu.js"></script>
+        <script src="assets/js/exercise-code.js"></script>
+        <script src="assets/js/workout.js"></script>
+        <script src="assets/js/tab-bar.js"></script>
+    </div>
 
 
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@2.0.0"></script>
-
-    <!-- Chart.js 3 or later (with time plugin) -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.0/dist/chart.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-time"></script>
-    <script src="assets/js/menu.js"></script>
-    <script src="assets/js/exercise-code.js"></script>
-    <script src="assets/js/workout.js"></script>
-
-
+   
 </body>
 
 </html>

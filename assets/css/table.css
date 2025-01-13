@@ -1,9 +1,9 @@
-.table-container {
+.table-container, .workout-view {
     overflow: auto;
-    max-height: calc(100vh - 100px);
+    max-height: calc(100vh - 200px);
 }
 
-table {
+table, .workout-view > table  {
     text-align: left;
     border-collapse: separate;
     transition: 1s ease-in-out;
@@ -17,8 +17,8 @@ table {
     /* border-radius: 13px; */
 }
 
-table th,
-table td {
+table th, .workout-view > table th
+table td, .workout-view > table td {
     text-align: left;
     padding: 8px;
     text-align: center;
@@ -92,6 +92,9 @@ table#csvTable2 td:nth-child(3) {
 
 @media (max-width: 768px) {
     table {
+        font-size: 14px;
+    }
+    .workout-view > table {
         font-size: 14px;
     }
 }

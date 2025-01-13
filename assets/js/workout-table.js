@@ -1,68 +1,119 @@
-// Select the workout div
-const workoutDiv = document.querySelector('.workout-view');
+const data = `
+        warm-up;
+        barbell row, 35 kg, 10 rep, 3 x;
+        inclined dumbbell row, 10 kg pair, 10 rep, 45 deg, 3 x;
+        machine row, 53 kg, 10 rep, 3 x;
+        lat pull, 53 kg, 10 rep, 3 x;
+        mountain climber, 20 rep pair;
+        plank, 1 min + 30 s;
+        russian twist, 1 min;
+        leg raise and hold, 1 min;
+        tuck in, 25 rep, 2 x;
+    `;
 
-// Extract the content within the backticks
-const workoutContent = workoutDiv.innerHTML.match(/`([\s\S]*?)`/)[1].trim();
+    const unitConversions = {
+        mass: { kg: 1, lb: 2.20462 },
+        duration: { ms: 1000, s: 1, min: 1 / 60 },
+        inclination: { deg: 1, rad: Math.PI / 180 },
+        distance: { m: 1, km: 1 / 1000, mi: 1 / 1609.34 },
+    };
 
-// Split the content into individual exercises
-const exercises = workoutContent.split(';').map(item => item.trim()).filter(item => item);
+    const units = {
+        mass: 'kg',
+        duration: 's',
+        inclination: 'deg',
+        distance: 'm',
+    };
 
-// Define the columns and initialize the data structure
-const columns = ['Set', 'Subset', 'Exercise', 'Mass', 'Reps', 'Inclination', 'Distance', 'Duration'];
+    function parseData(data) {
+        const rows = data.trim().split(';').filter(row => row.trim() !== '');
+        const tableData = [];
+        let setCounter = 1;
 
-// Parse each exercise into structured data
-const parsedExercises = exercises.map((exercise, index) => {
-    const parts = exercise.split(',').map(part => part.trim());
-    const data = { Set: Math.floor(index / 3) + 1, Subset: (index % 3) + 1 };
+        for (let i = 0; i < rows.length; i++) {
+            const row = rows[i].trim();
+            const parts = row.split(',').map(part => part.trim());
 
-    // Extract specific information based on patterns
-    if (parts[0]) data.Exercise = parts[0];
-    if (parts[1]?.match(/\d+/)) data.Mass = parts[1];
-    if (parts[2]?.includes('rep')) data.Reps = parts[2];
-    if (parts.some(part => part.includes('deg'))) data.Inclination = parts.find(part => part.includes('deg'));
-    if (parts.some(part => part.includes('min') || part.includes('s'))) data.Duration = parts.find(part => part.includes('min') || part.includes('s'));
+            const exercise = parts[0];
+            const massMatch = parts.find(p => p.includes('kg') || p.includes('lb')) || '';
+            const repsMatch = parts.find(p => p.includes('rep')) || '';
+            const inclinationMatch = parts.find(p => p.includes('deg') || p.includes('rad')) || '';
+            const durationMatch = parts.find(p => p.includes('min') || p.includes('s') || p.includes('ms')) || '';
 
-    return data;
-});
+            const mass = massMatch.replace(/[^0-9.]/g, '');
+            const reps = repsMatch.replace(/[^0-9]/g, '') + (repsMatch.includes('pair') ? ' (pair)' : '');
+            const inclination = inclinationMatch.replace(/[^0-9.]/g, '');
+            const duration = calculateDuration(durationMatch);
 
-// Filter out empty columns
-const activeColumns = columns.filter(column => parsedExercises.some(row => row[column]));
+            tableData.push({
+                set: setCounter,
+                exercise,
+                mass: mass || '',
+                reps: reps || '',
+                inclination: inclination || '',
+                duration: duration || '',
+            });
 
-// Generate the table
-const table = document.createElement('table');
-table.style.borderCollapse = 'collapse';
-table.style.width = '100%';
-table.style.border = '1px solid #ddd';
+            if (row.includes('3 x')) {
+                setCounter += 2; // Adjust for repeated sets
+            } else {
+                setCounter++;
+            }
+        }
+        return tableData;
+    }
 
-// Create table header
-const thead = document.createElement('thead');
-const headerRow = document.createElement('tr');
-activeColumns.forEach(column => {
-    const th = document.createElement('th');
-    th.style.border = '1px solid #ddd';
-    th.style.padding = '8px';
-    th.style.textAlign = 'left';
-    th.textContent = column;
-    headerRow.appendChild(th);
-});
-thead.appendChild(headerRow);
-table.appendChild(thead);
+    function calculateDuration(duration) {
+        if (duration.includes('min')) {
+            const [min, sec] = duration.split('+').map(part => parseInt(part.replace(/[^0-9]/g, '')) || 0);
+            return (min * 60 + sec).toString();
+        }
+        return duration.replace(/[^0-9]/g, '');
+    }
 
-// Create table body
-const tbody = document.createElement('tbody');
-parsedExercises.forEach(row => {
-    const tr = document.createElement('tr');
-    activeColumns.forEach(column => {
-        const td = document.createElement('td');
-        td.style.border = '1px solid #ddd';
-        td.style.padding = '8px';
-        td.textContent = row[column] || ''; // Fill empty cells with an empty string
-        tr.appendChild(td);
+    function generateTable(data) {
+        const table = document.getElementById('workout-table');
+        table.innerHTML = '';
+
+        const headers = ['Set', 'Exercise', 'Mass', 'Reps', 'Inclination', 'Duration'];
+        const headerRow = document.createElement('tr');
+
+        headers.forEach(header => {
+            const th = document.createElement('th');
+            th.textContent = header;
+            headerRow.appendChild(th);
+        });
+        table.appendChild(headerRow);
+
+        data.forEach(row => {
+            const tr = document.createElement('tr');
+            Object.values(row).forEach(value => {
+                const td = document.createElement('td');
+                td.textContent = value;
+                tr.appendChild(td);
+            });
+            table.appendChild(tr);
+        });
+    }
+
+    function updateUnits() {
+        const massUnit = document.getElementById('mass-unit').value;
+        const durationUnit = document.getElementById('duration-unit').value;
+        const inclinationUnit = document.getElementById('inclination-unit').value;
+
+        const updatedData = parsedData.map(row => ({
+            ...row,
+            mass: (row.mass * unitConversions.mass[massUnit]).toFixed(2),
+            duration: (row.duration * unitConversions.duration[durationUnit]).toFixed(2),
+            inclination: (row.inclination * unitConversions.inclination[inclinationUnit]).toFixed(2),
+        }));
+
+        generateTable(updatedData);
+    }
+
+    const parsedData = parseData(data);
+    generateTable(parsedData);
+
+    document.querySelectorAll('select').forEach(select => {
+        select.addEventListener('change', updateUnits);
     });
-    tbody.appendChild(tr);
-});
-table.appendChild(tbody);
-
-// Clear the workout div and append the table
-workoutDiv.innerHTML = ''; // Remove existing innerHTML
-workoutDiv.appendChild(table);

@@ -43,7 +43,7 @@
 
 <body>
 
-  
+
 
 
 
@@ -56,9 +56,9 @@
     -ms-user-select: none; /* IE 10+ */
     -moz-user-select: none; /* Older Firefox */">
 
-        <!-- <span class="material-symbols-outlined menu-icon" onclick="toggleMenu()">
+        <span class="material-symbols-outlined menu-icon" onclick="toggleMenu()">
             menu
-        </span> -->
+        </span>
 
         <div>
             <h1 style="font-family: 'Times New Roman', Times, serif; vertical-align: middle; height: 25px;">RAHUL NATHA
@@ -108,6 +108,41 @@
                 <span class="slider"></span>
             </label>
         </div>
+
+
+
+        <!-- ---------------------------------------------- UNits MENU -->
+
+        <div class="units-menu">
+            <label for="mass-unit">Mass:</label>
+            <select id="mass-unit">
+                <option value="kg">kg</option>
+                <option value="lb">lb</option>
+            </select>
+    
+            <label for="duration-unit">Duration:</label>
+            <select id="duration-unit">
+                <option value="s">s</option>
+                <option value="ms">ms</option>
+                <option value="min">min</option>
+            </select>
+    
+            <label for="inclination-unit">Inclination:</label>
+            <select id="inclination-unit">
+                <option value="deg">deg</option>
+                <option value="rad">rad</option>
+            </select>
+    
+            <label for="distance-unit">Distance:</label>
+            <select id="distance-unit">
+                <option value="m">m</option>
+                <option value="km">km</option>
+                <option value="mi">mi</option>
+            </select>
+        </div>
+
+
+
     </div>
 
 
@@ -116,7 +151,7 @@
         <button class="tab active" id="tab1">Log</button>
         <button class="tab" id="tab2">BCA</button>
     </div>
-    
+
 
 
     <div class="web-page">
@@ -288,18 +323,9 @@
                         <div class="workout-expand">&#9660;</div>
                     </div>
                     <div class="workout-view">
-                        `
-                        warm-up;
-                        barbell row, 35 kg, 10 rep, 3 x;
-                        inclined dumbbell row, 10 kg pair, 10 rep, 45 deg, 3 x;
-                        machine row, 53 kg, 10 rep, 3 x;
-                        lat pull, 53 kg, 10 rep, 3 x;
-                        mountain climber, 20 rep pair;
-                        plank, 90 s;
-                        russian twist, 1 min;
-                        leg raise and hold, 1 min;
-                        tuck in, 25 rep, 2 x;
-                        `
+                        <table id="workout-table">
+                            <!-- Table rows will be dynamically generated -->
+                        </table>
                     </div>
                 </div>
 
@@ -315,7 +341,7 @@
             </div>
         </div>
 
-       
+
         <!-- <script>
         var m = document.getElementsByClassName("grid-item");
 
@@ -363,7 +389,7 @@
         <script src="assets/js/chart.js"></script>
         <script src="menu.js"></script>
         <script src="assets/js/bca-table.js"></script>
-        <!-- <script src="assets/js/workout-table.js"></script> -->
+        <script src="assets/js/workout-table.js"></script>
         <script src="assets/js/log.js"></script>
 
 
@@ -383,7 +409,7 @@
     </div>
 
 
-   
+
 </body>
 
 </html>

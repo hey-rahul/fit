@@ -1,0 +1,110 @@
+#workout {
+
+    /* height: 500px; */
+    width: calc(100vw - 100px);
+    font-family: monospace;
+    /* background-color: aqua; */
+    margin: 0 50px;
+    border-radius: 13px;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    /* grid-auto-rows: minmax(100px, auto); */
+    /* grid-auto-columns: minmax(100px, auto); */
+
+    column-gap: 20px;
+    row-gap: 20px;
+
+}
+
+.workout-row {
+    /* margin-top: 20px; */
+    background-color: #121212;
+    /* height: 200px; */
+    font-family: monospace;
+    line-height: 1em;
+    
+
+    /* grid-template-columns: repeat(4, minmax(100px, 1fr)); */
+
+
+
+    display: grid;
+    grid-template-columns: repeat(2, auto) 1fr repeat(1, auto);
+    /* grid-auto-rows: minmax(100px, auto); */
+    /* grid-auto-columns: minmax(100px, auto); */
+
+
+    column-gap: 10px;
+    row-gap: 20px;
+}
+
+.workout-row>div {
+    padding: 5px;
+}
+
+.workout-row > *:not(.workout-view) {
+    cursor: pointer; /* Apply pointer only to the first row */
+}
+
+.workout-row > .workout-view {
+    cursor: default; /* Ensure no pointer for the view */
+}
+
+/* <div id="workout">
+<div class="workout-row">
+    <div class="workout-date">DATE</div>
+    <div class="workout-action-score">ACTION SCORE</div>
+    <div class="workout-title">TITLE</div>
+    <div class="workout-expand">EXPAND</div>
+    <div class="workout-view">VIEW</div>
+</div>
+
+</div> */
+
+.workout-date {
+    /* margin: 20px; */
+    /* width: 100px; */
+    /* height: 100px; */
+    /* background-color: brown; */
+    display: inline-flex;
+}
+
+.workout-action-score {
+    /* margin: 20px; */
+    /* width: 100px; */
+    /* height: 100px; */
+    /* background-color: brown; */
+    display: inline-flex;
+
+}
+
+.workout-title {
+    /* margin: 20px; */
+    /* width: calc(100% - 500px); */
+    /* height: 100px; */
+    /* background-color: brown; */
+    display: inline-flex;
+}
+
+.workout-expand {
+    /* margin: 20px; */
+    /* width: 100px; */
+    /* height: 100px; */
+    /* background-color: brown; */
+    display: inline-flex;
+}
+
+.workout-view {
+    /* margin-left: 200px; */
+    /* width: 500px; */
+    /* height: 100px; */
+    /* background-color: brown; */
+    display: block;
+    grid-row: 2;
+    /* Assign the element to the 2nd row */
+    grid-column: 3;
+    /* Assign the element to the 3rd column */
+    display: none;
+}

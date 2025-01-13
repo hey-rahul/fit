@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/home-page.css">
     <link rel="stylesheet" type="text/css" href="assets/css/table.css">
     <link rel="stylesheet" type="text/css" href="assets/css/exercise-code.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/workout.css">
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
@@ -39,8 +40,8 @@
 </head>
 
 <body>
-<div style="text-align: center;"><i style="text-align: center;">Fitness records of</i></div>
-    
+    <div style="text-align: center;"><i style="text-align: center;">Fitness records of</i></div>
+
 
     <header style="user-select: none; /* Standard for most modern browsers */
     -webkit-user-select: none; /* Safari */
@@ -303,6 +304,43 @@
     </div>
 
 
+    <h1>Workout log</h1>
+    <div id="workout">
+
+
+        <div class="workout-row">
+            <div class="workout-date">DATE <br> 11 <br> JAN <br> 2025</div>
+            <div class="workout-action-score">AS <br> 5/7</div>
+            <div class="workout-title">TITLE <br> BACK & CORE</div>
+            <div class="workout-expand">&#9660;</div> <!-- Down arrow -->
+            <div class="workout-view">Additional workout details
+
+                <br>
+                `
+                warm-up;
+                barbell row, 35 kg, 10 rep, 3 x;
+                inclined dumbbell row, 10 kg pair, 10 rep, 45 deg, 3 x;
+                machine row, 53 kg, 10 rep, 3 x;
+                lat pull, 53 kg, 10 rep, 3 x;
+                mountain climber, 20 rep pair;
+                plank, 1 min + 30 s;
+                russian twist, 1 min;
+                leg raise and hold, 1 min;
+                tuck in, 25 rep, 2 x;
+
+                `
+            </div>
+        </div>
+
+        <div class="workout-row">
+            <div class="workout-date">DATE <br> 12 <br> JAN <br> 2025</div>
+            <div class="workout-action-score">AS <br> 6/7</div>
+            <div class="workout-title">TITLE <br> REST</div>
+            <div class="workout-expand">&#9660;</div> <!-- Down arrow -->
+            <div class="workout-view">No additional workout details</div>
+        </div>
+
+    </div>
     <!-- <script>
         var m = document.getElementsByClassName("grid-item");
 
@@ -369,6 +407,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-time"></script>
     <script src="assets/js/menu.js"></script>
     <script src="assets/js/exercise-code.js"></script>
+    <script src="assets/js/workout.js"></script>
 
 
 </body>

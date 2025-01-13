@@ -18,13 +18,21 @@
 
 }
 
+@media screen and (max-width: 750px) {
+    #workout {
+        width: calc(100vw - 75px);
+        margin: 0 30px;
+    }
+
+}
+
 .workout-row {
     /* margin-top: 20px; */
     background-color: var(--tile-bg);
     /* height: 200px; */
     font-family: monospace;
     line-height: 1em;
-    
+
 
     /* grid-template-columns: repeat(4, minmax(100px, 1fr)); */
 
@@ -44,12 +52,14 @@
     padding: 5px;
 }
 
-.workout-row > *:not(.workout-view) {
-    cursor: pointer; /* Apply pointer only to the first row */
+.workout-row>*:not(.workout-view) {
+    cursor: pointer;
+    /* Apply pointer only to the first row */
 }
 
-.workout-row > .workout-view {
-    cursor: default; /* Ensure no pointer for the view */
+.workout-row>.workout-view {
+    cursor: default;
+    /* Ensure no pointer for the view */
 }
 
 /* <div id="workout">
@@ -111,10 +121,13 @@
 }
 
 .workout-row {
-    line-height: 1.2em; /* Default line-height for wrapped lines */
+    line-height: 1.2em;
+    /* Default line-height for wrapped lines */
 }
 
 .workout-row br {
-    line-height: 3em; /* Larger spacing for <br> */
-    display: block; /* Ensures <br> is treated as a block element */
+    line-height: 3em;
+    /* Larger spacing for <br> */
+    display: block;
+    /* Ensures <br> is treated as a block element */
 }

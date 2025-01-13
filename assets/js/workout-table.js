@@ -1,44 +1,68 @@
- // Read the CSV file and generate the table
- async function generateTableFromCSV(file) {
-    try {
-        const response = await fetch(file);
-        const csvData = await response.text();
+// Select the workout div
+const workoutDiv = document.querySelector('.workout-view');
 
-        const rows = csvData.split("\n");
-        const table = document.getElementById("csvTable2");
+// Extract the content within the backticks
+const workoutContent = workoutDiv.innerHTML.match(/`([\s\S]*?)`/)[1].trim();
 
-        // Process rows
-        rows.forEach((row, rowIndex) => {
-            const cells = row.split(",");
-            const tr = document.createElement("tr");
+// Split the content into individual exercises
+const exercises = workoutContent.split(';').map(item => item.trim()).filter(item => item);
 
-            // Process each cell
-            cells.forEach((cell, cellIndex) => {
-                const td = document.createElement(rowIndex === 0 ? "th" : "td");
-                td.textContent = cell.trim();
+// Define the columns and initialize the data structure
+const columns = ['Set', 'Subset', 'Exercise', 'Mass', 'Reps', 'Inclination', 'Distance', 'Duration'];
 
-                // Add the fixed-corner class to the top-left cell
-                if (rowIndex === 0 && cellIndex === 0) {
-                    td.classList.add("fixed-corner");
-                }
-                // Add the fixed-column class to the first column (except top-left)
-                else if (cellIndex === 0) {
-                    td.classList.add("fixed-column");
-                }
-                // Add the fixed-row class to the first row (except top-left)
-                else if (rowIndex === 0) {
-                    td.classList.add("fixed-row");
-                }
+// Parse each exercise into structured data
+const parsedExercises = exercises.map((exercise, index) => {
+    const parts = exercise.split(',').map(part => part.trim());
+    const data = { Set: Math.floor(index / 3) + 1, Subset: (index % 3) + 1 };
 
-                tr.appendChild(td);
-            });
+    // Extract specific information based on patterns
+    if (parts[0]) data.Exercise = parts[0];
+    if (parts[1]?.match(/\d+/)) data.Mass = parts[1];
+    if (parts[2]?.includes('rep')) data.Reps = parts[2];
+    if (parts.some(part => part.includes('deg'))) data.Inclination = parts.find(part => part.includes('deg'));
+    if (parts.some(part => part.includes('min') || part.includes('s'))) data.Duration = parts.find(part => part.includes('min') || part.includes('s'));
 
-            table.appendChild(tr);
-        });
-    } catch (error) {
-        console.error("Error loading CSV file:", error);
-    }
-}
+    return data;
+});
 
-// Call the function with the path to your CSV file
-generateTableFromCSV("/assets/data/workout.csv");
+// Filter out empty columns
+const activeColumns = columns.filter(column => parsedExercises.some(row => row[column]));
+
+// Generate the table
+const table = document.createElement('table');
+table.style.borderCollapse = 'collapse';
+table.style.width = '100%';
+table.style.border = '1px solid #ddd';
+
+// Create table header
+const thead = document.createElement('thead');
+const headerRow = document.createElement('tr');
+activeColumns.forEach(column => {
+    const th = document.createElement('th');
+    th.style.border = '1px solid #ddd';
+    th.style.padding = '8px';
+    th.style.textAlign = 'left';
+    th.textContent = column;
+    headerRow.appendChild(th);
+});
+thead.appendChild(headerRow);
+table.appendChild(thead);
+
+// Create table body
+const tbody = document.createElement('tbody');
+parsedExercises.forEach(row => {
+    const tr = document.createElement('tr');
+    activeColumns.forEach(column => {
+        const td = document.createElement('td');
+        td.style.border = '1px solid #ddd';
+        td.style.padding = '8px';
+        td.textContent = row[column] || ''; // Fill empty cells with an empty string
+        tr.appendChild(td);
+    });
+    tbody.appendChild(tr);
+});
+table.appendChild(tbody);
+
+// Clear the workout div and append the table
+workoutDiv.innerHTML = ''; // Remove existing innerHTML
+workoutDiv.appendChild(table);

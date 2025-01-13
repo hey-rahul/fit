@@ -2,10 +2,15 @@
     height: calc(100vh - 128px);
     overflow: hidden;
     overflow: auto;
-    margin-bottom: 128px;
+    /* margin-bottom: 128px; */
     /* display: none; */
 }
 
 #content-1 {
     display: none;
+    margin-bottom: 128px;
+}
+#content-2 {
+    /* display: none; */
+    margin-bottom: 128px;
 }

@@ -135,17 +135,17 @@
 }
 
 .workout-row {
-    line-height: 1.2em;
+    line-height: 1.3em;
     /* Default line-height for wrapped lines */
 }
 
 .workout-view {
-    line-height: 1.8em;
+    line-height: 1.2em;
     /* Default line-height for wrapped lines */
 }
 
-.workout-row br {
-    line-height: 3em;
+.workout-view br {
+    /* line-height: 3em; */
     /* Larger spacing for <br> */
     display: block;
     /* Ensures <br> is treated as a block element */

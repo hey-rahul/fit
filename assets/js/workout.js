@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const workoutViewDivs = document.querySelectorAll(".workout-view");
     
     workoutViewDivs.forEach(div => {
-        div.innerHTML = div.innerHTML.replace(/;/g, ';<br>');
+        div.innerHTML = div.innerHTML.replace(/;/g, ';<br><br>');
+        div.innerHTML = div.innerHTML.replace(/`/g, '');
+      
     });
 });

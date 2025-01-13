@@ -20,7 +20,7 @@
 
 .workout-row {
     /* margin-top: 20px; */
-    background-color: #121212;
+    background-color: var(--tile-bg);
     /* height: 200px; */
     font-family: monospace;
     line-height: 1em;
@@ -107,4 +107,14 @@
     grid-column: 3;
     /* Assign the element to the 3rd column */
     display: none;
+    border-top: 2px solid var(--base-invert);
+}
+
+.workout-row {
+    line-height: 1.2em; /* Default line-height for wrapped lines */
+}
+
+.workout-row br {
+    line-height: 3em; /* Larger spacing for <br> */
+    display: block; /* Ensures <br> is treated as a block element */
 }

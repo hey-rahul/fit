@@ -107,6 +107,8 @@ header h1 {
         --base: #fff;
         color-scheme: light;
         --bg: #ffffff50;
+        --base-invert: #000;
+        --tile-bg: #fff;
     }
 
     body {
@@ -127,6 +129,8 @@ header h1 {
         color-scheme: dark;
         --bg: #00000050;
         --bs: 0 4px 8px rgb(0 0 0 / 14%);
+        --base-invert: #fff;
+        --tile-bg: #3b3b3b;
     }
 
     body {

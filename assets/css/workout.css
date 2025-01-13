@@ -1,7 +1,7 @@
 #workout {
 
     /* height: 500px; */
-    width: calc(100vw - 100px);
+    width: calc(100% - 100px);
     font-family: monospace;
     /* background-color: aqua; */
     margin: 0 50px;
@@ -20,8 +20,9 @@
 
 @media screen and (max-width: 750px) {
     #workout {
-        width: calc(100vw - 75px);
+        width: calc(100% - 60px);
         margin: 0 30px;
+        margin-bottom: 30px;
     }
 
 }

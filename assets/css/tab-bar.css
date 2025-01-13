@@ -10,7 +10,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    /* background-color: var(--tile-bg); */
+    background-color: var(--tile-bg);
     display: flex;
     justify-content: center;
     align-items: center;
